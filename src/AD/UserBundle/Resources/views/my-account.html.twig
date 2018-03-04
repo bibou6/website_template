@@ -1,0 +1,5 @@
+Hello World!
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {{ user.username }}
+{% endif %}

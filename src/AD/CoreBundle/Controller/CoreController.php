@@ -1,6 +1,6 @@
 <?php
 
-namespace GC\CoreBundle\Controller;
+namespace AD\CoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
