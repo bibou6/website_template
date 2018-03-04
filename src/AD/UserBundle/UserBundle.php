@@ -1,9 +1,9 @@
 <?php
 
-namespace GC\CoreBundle;
+namespace AD\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CoreBundle extends Bundle
+class UserBundle extends Bundle
 {
 }
