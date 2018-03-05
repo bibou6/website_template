@@ -1,0 +1,5 @@
+{{ 'test'|trans }}
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {{ user.username }}
+{% endif %}
