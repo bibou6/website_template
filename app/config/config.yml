@@ -87,3 +87,7 @@ assetic:
         jsqueeze:   ~
         scssphp:
             formatter: 'Leafo\ScssPhp\Formatter\Compressed'
+            
+easy_admin:
+    entities:
+        - AD\UserBundle\Entity\User
