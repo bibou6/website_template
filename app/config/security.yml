@@ -25,3 +25,5 @@ security:
                 target:     fos_user_security_login
             remember_me:
                 secret:     %secret%
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }

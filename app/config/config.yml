@@ -89,5 +89,32 @@ assetic:
             formatter: 'Leafo\ScssPhp\Formatter\Compressed'
             
 easy_admin:
+    site_name: 'Website Name'
+    design:
+        brand_color: '#1ABC9C'
+        color_scheme: 'dark'
+        assets:
+            favicon: '/assets/backend/favicon.png'
+            css:
+                #look here to find the ids for the css: https://symfony.com/doc/current/bundles/EasyAdminBundle/book/design-configuration.html
+                # HTTP protocol-relative URL
+                #- '//example.org/css/admin1.css'
+            js:
+                #Same as css
     entities:
-        - AD\UserBundle\Entity\User
+        User:
+            class: AD\UserBundle\Entity\User
+            help: 'This is a first message' 
+            label: 'Customers'
+            list:
+                help: 'This is a message that will be displayed'
+                title: '%%entity_label%% listing'
+                max_results: 10
+                #fields:
+                #    - id
+                #    - username
+                #    - email
+            search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
+                fields:
+                    - username
+                    - email
