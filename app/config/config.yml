@@ -10,6 +10,7 @@ imports:
 parameters:
     locale: fr
     version: 1.0
+    app.path.user_images: /uploads/images/users
 
 framework:
     #esi: ~
@@ -88,6 +89,13 @@ assetic:
         scssphp:
             formatter: 'Leafo\ScssPhp\Formatter\Compressed'
             
+vich_uploader:
+    db_driver: orm
+    mappings:
+        user_images:
+            uri_prefix:         '%app.path.user_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/users'
+            
 easy_admin:
     site_name: 'Website Name'
     design:
@@ -106,14 +114,25 @@ easy_admin:
             class: AD\UserBundle\Entity\User
             help: 'This is a first message' 
             label: 'Customers'
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'vich_image' }
+                    - username
+                    - email
             list:
                 help: 'This is a message that will be displayed'
                 title: '%%entity_label%% listing'
                 max_results: 10
-                #fields:
-                #    - id
-                #    - username
-                #    - email
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
+                    - id
+                    - username
+                    - email
+                    - role
+                    - { property: 'enabled', type: 'boolean' }
+            show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.user_images%' }
             search: #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/list-search-show-configuration.html
                 fields:
                     - username
