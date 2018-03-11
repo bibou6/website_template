@@ -21,6 +21,7 @@ class AppKernel extends Kernel
         	new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         	new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
         	new Vich\UploaderBundle\VichUploaderBundle(),
+        	new Liip\ImagineBundle\LiipImagineBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

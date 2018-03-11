@@ -1,5 +1,7 @@
-{{ 'test'|trans }}
-
-{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-    {{ user.username }}
-{% endif %}
+{% extends 'CoreBundle:Core:menu.html.twig' %}
+{% block body %}
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        {{ user.username }}
+        <img src="{{ vich_uploader_asset(user,'imageFile') | imagine_filter('my_thumb') }}"	alt="{{ user.image }}" />
+    {% endif %}
+{% endblock %}

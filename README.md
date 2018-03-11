@@ -20,6 +20,9 @@
 		* Translations for User
 	* CoreSphereBundle
 		* To use a console directly in your website for "dev" environnement
+	* LiipImagineBundle
+		* Used to pre-set image transformation with an example in my-account.html.twig
+		* configuration in liip_imagine_config.yml
 ### Composer.json
 	* Symfony
 	* Twig
@@ -43,6 +46,6 @@
 ### Administration Part
 	* Uses EasyAdminBundle
 	* Go to /admin and see the result
-	* set up the configuration you want for your entities in app/config.yml //in the easyAdmin part
+	* set up the configuration you want for your entities in app/easy_admin_config.yml
 
 
