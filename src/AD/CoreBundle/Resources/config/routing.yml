@@ -1,6 +1,12 @@
 core_homepage:
-    path:     /
-    defaults: { _controller: CoreBundle:Core:index }
+    path: /{_locale}/
+    defaults: { _controller: 'CoreBundle:Core:indexWithLocale' }
+    requirements:
+      _locale: en|fr|es 
+      
+core_homepage_wo_locale:
+    path: /
+    defaults: { _controller: 'CoreBundle:Core:index' }
 
 #USER SECTION
 

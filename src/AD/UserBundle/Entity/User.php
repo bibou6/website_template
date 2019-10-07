@@ -28,7 +28,7 @@ class User extends BaseUser
 	private $image;
 	
 	/**
-	 * @Vich\UploadableField(mapping="user_images", fileNameProperty="image")
+	 * @Vich\UploadableField(mapping="user_images", fileNameProperty="image", nullable= true)
 	 * @var File
 	 */
 	private $imageFile;
@@ -67,6 +67,11 @@ class User extends BaseUser
 	public function getImage()
 	{
 		return $this->image;
+	}
+	
+	public function __construct(){
+		$this->updatedAt = new \Datetime("now");
+		parent::construct();
 	}
 
     /**

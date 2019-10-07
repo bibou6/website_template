@@ -1,2 +1,11 @@
-@charset "ISO-8859-1";body{background-image:url('../bundles/core/img/bg.jpg')}#test{padding:10px;border:1px black solid}
-@charset "ISO-8859-1";.test{padding:10px}
+footer{
+	bottom: 0;
+	text-align: center;
+}
+@CHARSET "ISO-8859-1";
+
+@CHARSET "ISO-8859-1";
+
+.test{
+	padding:10px;
+}
